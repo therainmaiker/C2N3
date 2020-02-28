@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:400,700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- displays site properly based on user's device -->
 
@@ -16,47 +20,65 @@
 
     <title>Project tracking intro component</title>
 
-    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <div class="head">
+        
+            <div class="logo"><img src="images/logo.svg"></div>
+            <div class="navbar">
 
-<nav class="navbar">
-  <span class="navbar-toggle" id="js-navbar-toggle">
-  </span>
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="#323334" fill-rule="evenodd"><path d="M0 32V.241h23.041zM31.15 32V.241h-4.411L17.48 13.158zM3.645 32l11.854-15.879L27.353 32z"/></g></svg>
-  <ul class="main-nav" id="js-menu">
-      <li>
-          <a href="#" class="nav-links">Product</a>
-      </li>
-      <li>
-          <a href="#" class="nav-links">Products</a>
-      </li>
-      <li>
-          <a href="#" class="nav-links">About Us</a>
-      </li>
-      <li>
-          <a href="#" class="nav-links">Contact Us</a>
-      </li>
-     
-  </ul>
-</nav>
+              <img class="navbar__ham" src="images/icon-hamburger.svg">
 
+              <ul class="navbar__menu">
 
+                  <li><a  class="navbar__menu--active"  id="color1" href="#">Product </a></li>
+                  <li> Features</li>
+                  <li> Pricing </li>
+                  <li><hr> </li>
+                  <li ><a class="navbar__menu--active " id="color" href="#">Login</a> </li>
+            </ul>
+            </div> 
 
+      </div>  
+    </header>
+    <section>
+      <div class="container">
+          
 
+              <div class="text">
 
+                <div class="text__titre">
+                  <h1> <span class="text__titre--text">New </span>
+                    <span class="text__titre--text2">Monograph Dashboard</span> </h1>
+                </div>
+                <div class="text__block">
+                <h2 class="text__block--para1">Powerful insights into your team</h2>
+                <p class="text__block--para2">Project planning and time tracking <br>for agile teams </p>
+                </div>
+               
+                <div class="text__button">
+                  <button class="text__button--btn"><a href="#">
+                  Schedule a demo </a>
+                </button>
 
+                 <p class="preview" > to see a preview </p>
+                </div>
+              </div>
+              <div class="image"><img src="images/illustration-devices.svg"></div>
+      </div>      
 
+    </section>
 
-
-
-
-
-
-
-
-    <footer>
-      <p class="attribution">Coded by <a href="#">Your Name Here</a>.</p>
-    </footer>
-  </body>
+   
 </html>
