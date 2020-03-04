@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Barlow Condensed";
+  font-family: "Barlow"; }
+
+body {
+  font-family: "Barlow Condensed";
+  font-family: "Barlow"; }
+  body .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: #eef3f6;
+    border-bottom-left-radius: 80px 80px;
+    float: right;
+    right: 0;
+    height: 50vh;
+    width: 60vw; }
+  body .logo {
+    padding-left: 20px;
+    float: left;
+    padding-top: 40px;
+    width: 50%; }
+  body .burgers {
+    right: 20px;
+    bottom: 4px; }
+  body .closes {
+    visibility: hidden;
+    right: 42px;
+    bottom: 4px; }
+  body input[type=checkbox] {
+    display: none; }
+  body input[type=checkbox]:checked ~ .btn .burgers {
+    visibility: hidden; }
+  body input[type=checkbox]:checked ~ .btn .closes {
+    visibility: visible; }
+  body input[type=checkbox]:checked ~ .navbar__mobile {
+    display: block; }
+  body .navbar__mobile {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    box-shadow: 0px 1px 2px 2px grey;
+    transition: 1s;
+    list-style: none;
+    padding: 50px;
+    width: 50%;
+    background: white;
+    text-align: center;
+    transition: 1s;
+    right: 1.5rem;
+    font-size: 25px;
+    line-height: 50px; }
+  body .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    float: right;
+    width: 100%; }
+    body .navbar .navbar__ham {
+      visibility: hidden; }
+      @media (max-width: 400px) {
+        body .navbar .navbar__ham {
+          visibility: visible;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          right: 20px;
+          bottom: 4px; } }
+    body .navbar .navbar__menu {
+      color: #242942;
+      font-size: 14px;
+      list-style-type: none;
+      font-weight: 700;
+      font-family: "Barlow Condensed";
+      text-transform: uppercase;
+      display: flex;
+      margin: 0 auto;
+      width: 50%;
+      float: right; }
+      body .navbar .navbar__menu li {
+        padding: 5px 10px;
+        margin-left: 15px; }
+        body .navbar .navbar__menu li a {
+          text-decoration: none; }
+        body .navbar .navbar__menu li #color1 {
+          color: #242942; }
+        body .navbar .navbar__menu li #color {
+          color: #a0a1ac; }
+        body .navbar .navbar__menu li .navbar__menu--active:hover {
+          text-decoration: underline; }
+      body .navbar .navbar__menu hr {
+        width: 7px;
+        height: 7px;
+        background-color: #a0a1ac;
+        border-radius: 6px; }
+
+section {
+  margin-top: 15%; }
+  @media (max-width: 400px) {
+    section {
+      margin-top: 30%; } }
+  section .container {
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; }
+    @media (max-width: 400px) {
+      section .container {
+        margin-bottom: 50%; } }
+    section .container .images {
+      overflow: hidden;
+      width: 100%; }
+      section .container .images img {
+        padding-left: 5%;
+        width: 110%; }
+        @media (max-width: 400px) {
+          section .container .images img {
+            margin-bottom: 20%;
+            padding-left: 20%;
+            margin-top: 10%;
+            overflow: hidden; } }
+  section .text {
+    display: block;
+    width: 50%;
+    padding-left: 10%; }
+    @media (max-width: 400px) {
+      section .text {
+        width: 90%; } }
+    section .text .text__titre .text__titre--text {
+      background-color: black;
+      color: #eef3f6;
+      border-radius: 10px;
+      padding: 2px 5px;
+      margin-right: 10px;
+      text-transform: uppercase;
+      font-size: 20px; }
+      @media (max-width: 400px) {
+        section .text .text__titre .text__titre--text {
+          font-size: 20px; } }
+    section .text .text__titre .text__titre--text2 {
+      color: #a0a1ac;
+      letter-spacing: 5px;
+      font-size: 16px; }
+      @media (max-width: 400px) {
+        section .text .text__titre .text__titre--text2 {
+          font-size: 16px; } }
+    section .text .text__block {
+      padding-top: 20px; }
+      section .text .text__block .text__block--para1 {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: "Barlow Condensed";
+        color: #242942;
+        margin-bottom: 5%; }
+        @media (max-width: 400px) {
+          section .text .text__block .text__block--para1 {
+            font-size: 36px;
+            margin-bottom: 10%; } }
+      section .text .text__block .text__block--para2 {
+        font-size: 28px;
+        color: #a0a1ac; }
+        @media (max-width: 400px) {
+          section .text .text__block .text__block--para2 {
+            font-size: 20px;
+            margin-bottom: 10%; } }
+    section .text .text__button {
+      text-transform: uppercase;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: row; }
+      section .text .text__button .text__button--btn {
+        text-transform: uppercase;
+        padding: 16px 64px;
+        background-color: #ff5c5c;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-family: "Barlow Condensed";
+        font-weight: 700; }
+        section .text .text__button .text__button--btn:hover {
+          background-color: rgba(255, 92, 92, 0.568); }
+        section .text .text__button .text__button--btn a {
+          text-decoration: none;
+          color: white; }
+        @media (max-width: 400px) {
+          section .text .text__button .text__button--btn {
+            padding: 5px 20px; } }
+      section .text .text__button p {
+        padding: 16px 64px;
+        color: #a0a1ac; }
+        @media (max-width: 400px) {
+          section .text .text__button p {
+            padding: 0;
+            margin-left: 2%; } }
+
+.navbar__menu {
+  justify-content: center; }
+
+.preview {
+  letter-spacing: 4px; }
+  @media (max-width: 400px) {
+    .preview {
+      letter-spacing: 1px; } }
+
+@media only screen and (max-width: 375px) {
+  .navbar__menu li {
+    display: none;
+    background-color: red; }
+  .background {
+    background-color: #eef3f6;
+    border-bottom-left-radius: 80px 80px;
+    float: right;
+    height: 50vh;
+    width: 45%; }
+  section .container {
+    flex-direction: column-reverse;
+    flex-wrap: wrap; } }
