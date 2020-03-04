@@ -1,328 +1,373 @@
-$mycolored:hsl(0, 100%, 68%);
+$mycolored: hsl(0, 100%, 68%);
 $myVeryDarkBlue: hsl(230, 11%, 40%);
 $GrayishBlue: hsl(231, 7%, 65%);
-$LightGrayishBlu :hsl(207, 33%, 95%);
+$LightGrayishBlu: hsl(207, 33%, 95%);
 $VeryDarkBlue: hsl(230, 29%, 20%);
-$sizefon :18px;
+$sizefont: 18px;
+
+@mixin media() {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
 
 * {
     padding: 0;
     margin: 0;
-     
-   
+    font-family: "Barlow Condensed";
+    font-family: "Barlow";
 }
 
-    body {
-        width: 80%;
-        margin: 0 auto;
-        font-family: 'Barlow Condensed', ;
-        font-family: 'Barlow', ;
+body {
+    font-family: "Barlow Condensed";
+    font-family: "Barlow";
 
-            header {
-                .head {
-                  
-                    width: 100%;
-                    height: 60vh;
-                    position: fixed;
-                    top: 0;
-                    right: 0;
-                    .logo{
-                        float:left;
-                        padding-top: 40px;
-                        display: block;
-                        padding-left: 10%;
-                    
-                    } 
-                    .navbar {
-                        .navbar__ham {
-                            display: none;
-                            
-                        }
+    .background {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        background-color: $LightGrayishBlu;
+        border-bottom-left-radius: 80px 80px;
+        float: right;
+        right: 0;
+        height: 50vh;
+        width: 60vw;
+    }
 
-                        text-align: center;
-                        float: right;
-                        width: 45%;
-                        height: 50vh;
-                        background-color: $LightGrayishBlu;
-                        border-bottom-left-radius: 80px 80px;
+    .logo {
+        padding-left: 20px;
+        float: left;
+        padding-top: 40px;
+        width: 50%;
+    }
 
-                        .navbar__menu{
 
-                            color: $VeryDarkBlue;
-                            font-size: $sizefon - 4;
-                            list-style-type: none;
-                            padding-top: 40px;
-                            font-weight: 700;
-                            font-family:'Barlow Condensed' ;
-                            text-transform: uppercase;
-                            display: flex;
 
-                           
-                            
-                            li {
-                                
-                                padding: 5px 10px;
-                                margin-left:15px;
-                                
-                                    i {
-                                        color:$GrayishBlue;
-                                        font-size: 10px;
-                                    }
-                                        
-                                
-                                a {
-                                    text-decoration:none ;
-                                   
-                                        
+    .burgers {
 
-                                   
-                                        
-    
-                                    
+        right: 20px;
+        bottom: 4px;
 
-                                }
-                                #color1{
-                                    color: $VeryDarkBlue; 
-                                }
-                                #color {
-                                            
-                                    color:$GrayishBlue;
-                                 
-                                         }
-                                .navbar__menu--active {
-                                   
-                                    &:hover {
-                                        text-decoration: underline;
-                                    }
-                                   
-                                
-                                       
-                                }
-                                
-                            }
-                            hr {
-                                width: 7px;
-                                height: 7px;
-                                background-color:$GrayishBlue;
-                                border-radius: 6px;
-                            }
+    }
 
-                        }
-                         }
-                    }
+
+    .closes {
+        visibility: hidden;
+
+        right: 42px;
+        bottom: 4px;
+
+    }
+
+
+
+
+
+    input[type=checkbox] {
+
+        display: none;
+
+    }
+
+    input[type=checkbox]:checked~.btn .burgers {
+        visibility: hidden;
+
+    }
+
+    input[type=checkbox]:checked~.btn .closes {
+
+        visibility: visible;
+
+    }
+
+    input[type=checkbox]:checked~.navbar__mobile {
+
+        display: block;
+
+
+    }
+
+    .navbar__mobile {
+
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        box-shadow: 0px 1px 2px 2px grey;
+        transition: 1s;
+        list-style: none;
+        padding: 50px;
+        width: 50%;
+        background: white;
+        text-align: center;
+        transition: 1s;
+        right: 1.5rem;
+font-size: 25px;
+line-height: 50px;
+
+
+
+    }
+
+
+    //   .navbar__close { 
+    // visibility: hidden;
+    // @include media {
+    //     visibility: visible;
+
+    // }
+
+
+    //   }
+
+
+
+    .navbar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        float: right;
+        width: 100%;
+
+            .navbar__ham {
+              visibility: hidden;
+
+              @include media {
+                visibility: visible;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 20px;
+        bottom: 4px;
             }
-            section {
-                .container{
-
-                   position: fixed;
-                   top: 25%;
-                   right: 0;
-                   left: 0;
-                   width: 100%;
-                   height: auto;
-                    display: flex;
-                    flex-direction: row;
-                    
-                    .image {
-                        width: 50%;
-                        display: block;
-                        img{
-                            padding-left: 10%;
-                        } 
-                    }
-                            }
-                    .text {
-                        display: block;
-                        width: 50%;
-                        padding-left: 10%;
-
-                      
-                        
-                        
-                        .text__titre{
-
-                            text-transform: uppercase;
-                            font-size: $sizefon - 5;
-                            .text__titre--text {
-                                background-color: black;
-                                color:$LightGrayishBlu;
-                                border-radius: 10px;
-                                padding: 2px 5px;
-                                margin-right: 10px;
-                            }
-                            .text__titre--text2 {
-                                color:$GrayishBlue ;
-                                letter-spacing: 5px;
-                            }
-                        }
-                        .text__block {
-                            padding-top: 20px;
-                            .text__block--para1{
-                            font-size:$sizefon*4 ;
-                            text-transform: uppercase;
-                            font-weight: 700;
-                            font-family:'Barlow Condensed' ;
-                            color: $VeryDarkBlue;
-                            }
-                            .text__block--para2 {
-                                font-size: $sizefon +10;
-                                color:$GrayishBlue ;
-                            
-                            }
-
-                        }
-                        .text__button {
-                                text-transform: uppercase;
-                                padding-top: 20px;
-
-
-                                display: flex;
-                                flex-direction: row;
-                           
-                            .text__button--btn {
-                                
-                                text-transform: uppercase;
-                                padding: 16px 64px;
-                                background-color:$mycolored ;
-                                border-radius:  10px;
-                                border: none;
-                                color: white;
-                                font-family:'Barlow Condensed' ;
-                                font-weight: 700;
-                                &:hover {
-                                    background-color:hsla(0, 100%, 68%, 0.568);
-                                }
-                                & a {
-                                    text-decoration: none;
-                                    color: white;
-                                    
-                                }
-                            }
-                            p {
-                                padding: 16px 64px;
-                                color:$GrayishBlue ;
-                                
-                            }
-                           
-                        }
-
-                    }        
-                       
-                } 
-               
             }
 
-            .navbar__menu { 
-justify-content: center;
+        .navbar__menu {
+            color: $VeryDarkBlue;
+            font-size: $sizefont - 4;
+            list-style-type: none;
+            font-weight: 700;
+            font-family: "Barlow Condensed";
+            text-transform: uppercase;
+            display: flex;
+            margin: 0 auto;
+            width: 50%;
+            float: right;
 
+            li {
+                padding: 5px 10px;
+                margin-left: 15px;
 
-            }
-
-            .preview { 
-letter-spacing: 4px;
-
-
-            }
-
-
-            @media only screen and (max-width: 375px) {
-
-                * {
-                    padding: 0;
-                    margin: 0;
-                        body {
-                            width: 100%;
-                            margin: 0 ;
-                            height: auto;
-                                header {
-                                    .head {
-                                        z-index: 0;
-                                        .navbar {
-                                            height: 450px;
-                                          
-                                            
-                                            .navbar__ham{
-                                                display: block;
-                                                padding-top: 50px;
-                                                padding-left: 80px;
-                                                cursor: pointer;
-                                            }
-                                               .navbar__menu {
-                                                margin-top: 50px;
-                                                background-color: rgb(156, 76, 76);
-                                                 display: flex;
-                                                 z-index: 1;
-                                                position: absolute;
-                                                text-align: center;
-                                                width: 70%;
-                                                height: auto;
-                                                float: right;
-                                                top: 50px;
-                                                left: 90px;
-                                                transition: 0.5s;
-                                                flex-direction: column;
-
-
-
-
-                                               }
-                                        }
-
-                                    }
-                                }
-                                section {
-                                    .container {
-                                        z-index: -1;
-                                        display: flex;
-                                        flex-direction: column-reverse;
-                                        flex-wrap: nowrap;
-                                           .image {
-                                               width: 100%; 
-                                               
-
-                                                img {
-                                                    margin-bottom: 100px;
-                                                    width: 120%;
-                                                    height: auto;
-
-                                                    
-                                                }
-                                           
-                                                 }
-                                            .text {
-                                                width: 100%;
-
-                                                .text__block {
-                                                    .text__block--para1 {
-                                                        font-size: $sizefon*2;
-                                                    }
-                                                    .text__block--para2 {
-                                                        font-size:$sizefon;  
-                                                    }
-                                                }
-                                                .text__button {
-                                                     .text__button--btn {
-                                                       padding: 10px 15px;
-
-
-                                                     }
-                                                     p {
-                                                        padding: 10px 15px;
-
-                                                     }
-                                                  
-                                                }
-
-                                            }     
-                                    }
-                                    
-                                }
-                        }
+                a {
+                    text-decoration: none;
                 }
 
+                #color1 {
+                    color: $VeryDarkBlue;
+                }
+
+                #color {
+                    color: $GrayishBlue;
+                }
+
+                .navbar__menu--active {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
-       
-           
+
+            hr {
+                width: 7px;
+                height: 7px;
+                background-color: $GrayishBlue;
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+section {
+    margin-top: 15%;
+
+    @include media {
+        margin-top: 30%;
+    }
+
+    .container {
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        @include media {
+            margin-bottom: 50%;
+        }
+
+        .images {
+            //   display: block;
+            // margin-left: 60px;
+            overflow: hidden;
+            width: 100%;
+
+            img {
+                padding-left: 5%;
+                width: 110%;
+
+                @include media {
+                    margin-bottom: 20%;
+                    padding-left: 20%;
+                    margin-top: 10%;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    .text {
+        display: block;
+        width: 50%;
+        padding-left: 10%;
+
+        @include media {
+            width: 90%;
+        }
+
+        .text__titre {
+            .text__titre--text {
+                background-color: black;
+                color: $LightGrayishBlu;
+                border-radius: 10px;
+                padding: 2px 5px;
+                margin-right: 10px;
+                text-transform: uppercase;
+                font-size: 20px;
+
+                @include media {
+                    font-size: 20px;
+                }
+            }
+
+            .text__titre--text2 {
+                color: $GrayishBlue;
+                letter-spacing: 5px;
+                font-size: 16px;
+
+                @include media {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .text__block {
+            padding-top: 20px;
+
+            .text__block--para1 {
+                font-size: 50px;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-family: "Barlow Condensed";
+                color: $VeryDarkBlue;
+                margin-bottom: 5%;
+
+                @include media {
+                    font-size: 36px;
+                    margin-bottom: 10%;
+                }
+            }
+
+            .text__block--para2 {
+                font-size: $sizefont + 10;
+                color: $GrayishBlue;
+
+                @include media {
+                    font-size: 20px;
+                    margin-bottom: 10%;
+                }
+            }
+        }
+
+        .text__button {
+            text-transform: uppercase;
+            padding-top: 20px;
+
+            display: flex;
+            flex-direction: row;
+
+            .text__button--btn {
+                text-transform: uppercase;
+                padding: 16px 64px;
+                background-color: $mycolored;
+                border-radius: 10px;
+                border: none;
+                color: white;
+                font-family: "Barlow Condensed";
+                font-weight: 700;
+
+                &:hover {
+                    background-color: hsla(0, 100%, 68%, 0.568);
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                @include media {
+                    padding: 5px 20px;
+                }
+            }
+
+            p {
+                padding: 16px 64px;
+                color: $GrayishBlue;
+
+                @include media {
+                    padding: 0;
+                    margin-left: 2%;
+                }
+            }
+        }
+    }
+}
+
+.navbar__menu {
+    justify-content: center;
+}
+
+.preview {
+    letter-spacing: 4px;
+
+    @include media {
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .navbar__menu {
+        li {
+            display: none;
+            background-color: red;
+        }
+    }
 
 
-    
+    .background {
+        background-color: $LightGrayishBlu;
+        border-bottom-left-radius: 80px 80px;
+        float: right;
+        height: 50vh;
+        width: 45%;
+    }
+
+    section .container {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+
+    ////////////// teeeeeeext
+}
