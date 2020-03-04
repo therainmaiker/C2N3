@@ -6,7 +6,7 @@ $VeryDarkBlue: hsl(230, 29%, 20%);
 $sizefont: 18px;
 
 @mixin media() {
-    @media (max-width: 400px) {
+    @media (max-width: 800px) {
         @content;
     }
 }
@@ -92,7 +92,7 @@ body {
         display: none;
         position: absolute;
         flex-direction: column;
-        box-shadow: 0px 1px 2px 2px grey;
+        box-shadow: 0px 1px 2px 2pxgrey;
         transition: 1s;
         list-style: none;
         padding: 50px;
@@ -151,7 +151,6 @@ line-height: 50px;
             text-transform: uppercase;
             display: flex;
             margin: 0 auto;
-            width: 50%;
             float: right;
 
             li {
@@ -347,7 +346,7 @@ section {
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
     .navbar__menu {
         li {
             display: none;
@@ -370,4 +369,13 @@ section {
     }
 
     ////////////// teeeeeeext
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar__menu {
+        li {
+            display: none;
+            
+        }
+    }
 }

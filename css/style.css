@@ -41,7 +41,7 @@ body {
     display: none;
     position: absolute;
     flex-direction: column;
-    box-shadow: 0px 1px 2px 2px grey;
+    box-shadow: 0px 1px 2px 2pxgrey;
     transition: 1s;
     list-style: none;
     padding: 50px;
@@ -61,7 +61,7 @@ body {
     width: 100%; }
     body .navbar .navbar__ham {
       visibility: hidden; }
-      @media (max-width: 400px) {
+      @media (max-width: 800px) {
         body .navbar .navbar__ham {
           visibility: visible;
           margin: 0;
@@ -78,7 +78,6 @@ body {
       text-transform: uppercase;
       display: flex;
       margin: 0 auto;
-      width: 50%;
       float: right; }
       body .navbar .navbar__menu li {
         padding: 5px 10px;
@@ -99,7 +98,7 @@ body {
 
 section {
   margin-top: 15%; }
-  @media (max-width: 400px) {
+  @media (max-width: 800px) {
     section {
       margin-top: 30%; } }
   section .container {
@@ -111,7 +110,7 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap; }
-    @media (max-width: 400px) {
+    @media (max-width: 800px) {
       section .container {
         margin-bottom: 50%; } }
     section .container .images {
@@ -120,7 +119,7 @@ section {
       section .container .images img {
         padding-left: 5%;
         width: 110%; }
-        @media (max-width: 400px) {
+        @media (max-width: 800px) {
           section .container .images img {
             margin-bottom: 20%;
             padding-left: 20%;
@@ -130,7 +129,7 @@ section {
     display: block;
     width: 50%;
     padding-left: 10%; }
-    @media (max-width: 400px) {
+    @media (max-width: 800px) {
       section .text {
         width: 90%; } }
     section .text .text__titre .text__titre--text {
@@ -141,14 +140,14 @@ section {
       margin-right: 10px;
       text-transform: uppercase;
       font-size: 20px; }
-      @media (max-width: 400px) {
+      @media (max-width: 800px) {
         section .text .text__titre .text__titre--text {
           font-size: 20px; } }
     section .text .text__titre .text__titre--text2 {
       color: #a0a1ac;
       letter-spacing: 5px;
       font-size: 16px; }
-      @media (max-width: 400px) {
+      @media (max-width: 800px) {
         section .text .text__titre .text__titre--text2 {
           font-size: 16px; } }
     section .text .text__block {
@@ -160,14 +159,14 @@ section {
         font-family: "Barlow Condensed";
         color: #242942;
         margin-bottom: 5%; }
-        @media (max-width: 400px) {
+        @media (max-width: 800px) {
           section .text .text__block .text__block--para1 {
             font-size: 36px;
             margin-bottom: 10%; } }
       section .text .text__block .text__block--para2 {
         font-size: 28px;
         color: #a0a1ac; }
-        @media (max-width: 400px) {
+        @media (max-width: 800px) {
           section .text .text__block .text__block--para2 {
             font-size: 20px;
             margin-bottom: 10%; } }
@@ -190,13 +189,13 @@ section {
         section .text .text__button .text__button--btn a {
           text-decoration: none;
           color: white; }
-        @media (max-width: 400px) {
+        @media (max-width: 800px) {
           section .text .text__button .text__button--btn {
             padding: 5px 20px; } }
       section .text .text__button p {
         padding: 16px 64px;
         color: #a0a1ac; }
-        @media (max-width: 400px) {
+        @media (max-width: 800px) {
           section .text .text__button p {
             padding: 0;
             margin-left: 2%; } }
@@ -206,11 +205,11 @@ section {
 
 .preview {
   letter-spacing: 4px; }
-  @media (max-width: 400px) {
+  @media (max-width: 800px) {
     .preview {
       letter-spacing: 1px; } }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
   .navbar__menu li {
     display: none;
     background-color: red; }
@@ -223,3 +222,7 @@ section {
   section .container {
     flex-direction: column-reverse;
     flex-wrap: wrap; } }
+
+@media only screen and (max-width: 800px) {
+  .navbar__menu li {
+    display: none; } }
